@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewAutolayoutTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="self.view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgO-Ri-eZy" userLabel="(label) self.view">
+                                <rect key="frame" x="16" y="20" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uw1-pX-o1w">
+                                <rect key="frame" x="56" y="57" width="888" height="903"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldp-G7-hb3" userLabel="Content View">
+                                        <rect key="frame" x="50" y="50" width="2084" height="2517"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContentView: Sides constrained to ScrollView, no size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9d-QY-t1Q" userLabel="(label) ContentView: Sides constrained to ScrollView, no size">
+                                                <rect key="frame" x="8" y="8" width="412" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image: Fixed height and width constraints, position constrained to ContentView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUB-9b-yDX" userLabel="(label) Fixed-Size Image: Constrained to ContentView">
+                                                <rect key="frame" x="34" y="37" width="609" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2000px-Smiley.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="GP6-L4-eqf" userLabel="Small Image">
+                                                <rect key="frame" x="34" y="66" width="200" height="200"/>
+                                                <color key="backgroundColor" red="0.58669370409999999" green="0.75178509950000005" blue="0.58207315209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="HQp-Jk-9Jd"/>
+                                                    <constraint firstAttribute="width" constant="200" id="KTR-IO-4A7"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQg-rm-IJO">
+                                                <rect key="frame" x="34" y="310" width="400" height="117"/>
+                                                <color key="backgroundColor" red="0.59503161810000005" green="0.74643180129999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="250" constant="100" id="M43-AZ-cBY"/>
+                                                    <constraint firstAttribute="width" constant="400" id="hOw-P5-YAk"/>
+                                                </constraints>
+                                                <string key="text">Expanding Text Box: 
+• Bottom constrained to large image
+• Top and side constrained to ContentView
+• Fixed width constraint
+• Height constrained at low priority
+• Scrolling NOT enabled -- this is what makes it auto-expand</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2000px-Smiley.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="mSr-gA-Tr4" userLabel="Big Image">
+                                                <rect key="frame" x="34" y="467" width="2000" height="2000"/>
+                                                <color key="backgroundColor" red="0.58669370409999999" green="0.75178509950000005" blue="0.58207315209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Same image, no size constraints, constrained to ContentView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr4-JY-lxK" userLabel="(label) Same image, no size constraints, constrained to ContentView">
+                                                <rect key="frame" x="44" y="477" width="471" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="y9d-QY-t1Q" firstAttribute="top" secondItem="Ldp-G7-hb3" secondAttribute="top" constant="8" id="1T2-Qv-yXj"/>
+                                            <constraint firstItem="GP6-L4-eqf" firstAttribute="top" secondItem="Ldp-G7-hb3" secondAttribute="top" constant="66" id="5lt-5t-yBg"/>
+                                            <constraint firstItem="mSr-gA-Tr4" firstAttribute="leading" secondItem="Ldp-G7-hb3" secondAttribute="leading" constant="34" id="BAj-gj-mvo"/>
+                                            <constraint firstAttribute="trailing" secondItem="mSr-gA-Tr4" secondAttribute="trailing" constant="50" id="H09-9J-v5K"/>
+                                            <constraint firstItem="y9d-QY-t1Q" firstAttribute="leading" secondItem="Ldp-G7-hb3" secondAttribute="leading" constant="8" id="I7K-bf-heh"/>
+                                            <constraint firstItem="NUB-9b-yDX" firstAttribute="leading" secondItem="Ldp-G7-hb3" secondAttribute="leading" constant="34" id="Krd-nh-gAf"/>
+                                            <constraint firstItem="ZQg-rm-IJO" firstAttribute="leading" secondItem="Ldp-G7-hb3" secondAttribute="leading" constant="34" id="Ooi-SZ-rmZ"/>
+                                            <constraint firstItem="mSr-gA-Tr4" firstAttribute="top" secondItem="ZQg-rm-IJO" secondAttribute="bottom" constant="40" id="Y99-6I-w6X"/>
+                                            <constraint firstItem="Kr4-JY-lxK" firstAttribute="top" secondItem="mSr-gA-Tr4" secondAttribute="top" constant="10" id="Zk6-TG-PBX"/>
+                                            <constraint firstAttribute="bottom" secondItem="mSr-gA-Tr4" secondAttribute="bottom" constant="50" id="c8B-ch-MIJ"/>
+                                            <constraint firstItem="GP6-L4-eqf" firstAttribute="leading" secondItem="Ldp-G7-hb3" secondAttribute="leading" constant="34" id="cn6-8p-GPh"/>
+                                            <constraint firstItem="NUB-9b-yDX" firstAttribute="top" secondItem="Ldp-G7-hb3" secondAttribute="top" constant="37" id="csW-rk-Uic"/>
+                                            <constraint firstItem="Kr4-JY-lxK" firstAttribute="leading" secondItem="mSr-gA-Tr4" secondAttribute="leading" constant="10" id="pgi-tK-4lz"/>
+                                            <constraint firstItem="ZQg-rm-IJO" firstAttribute="top" secondItem="Ldp-G7-hb3" secondAttribute="top" constant="310" id="y4T-7F-ihE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ldp-G7-hb3" secondAttribute="bottom" constant="50" id="Byf-ki-bzs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ldp-G7-hb3" secondAttribute="trailing" constant="50" id="HKE-B4-KYd"/>
+                                    <constraint firstItem="Ldp-G7-hb3" firstAttribute="top" secondItem="Uw1-pX-o1w" secondAttribute="top" constant="50" id="Y3m-ey-c9o"/>
+                                    <constraint firstItem="Ldp-G7-hb3" firstAttribute="leading" secondItem="Uw1-pX-o1w" secondAttribute="leading" constant="50" id="tLQ-3J-exA"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScrollView: Constrained to self.view and top guide, no size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-LN-A1M" userLabel="(label) Scroll View">
+                                <rect key="frame" x="66" y="70" width="448" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bwl-LN-A1M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="3yv-aW-qyl"/>
+                            <constraint firstItem="Uw1-pX-o1w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="8Cu-Qx-zjp"/>
+                            <constraint firstItem="Bwl-LN-A1M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Azk-LF-hF2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uw1-pX-o1w" secondAttribute="trailing" constant="40" id="FlO-l6-eEY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Uw1-pX-o1w" secondAttribute="bottom" constant="40" id="QPZ-TS-LI5"/>
+                            <constraint firstItem="Uw1-pX-o1w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="RSn-K0-HoP"/>
+                            <constraint firstItem="IgO-Ri-eZy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ra6-Xa-2gI"/>
+                            <constraint firstItem="IgO-Ri-eZy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mav-Sa-7GU"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="501"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2000px-Smiley.svg.png" width="2000" height="2000"/>
+    </resources>
+</document>
